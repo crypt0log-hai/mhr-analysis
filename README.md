@@ -32,7 +32,7 @@ pip install -r requirements.txt
 1. The script reads the hashes from the `hashes.txt` file.
 2. Each hash is validated using a regular expression.
 3. Valid hashes are queried using the Malware Hash Registry (MHR) DNS API [https://hash.cymru.com/docs_dns](https://hash.cymru.com/docs_dns) to retrieve the timestamp and AV hit rate of malicious hashes.
-4. The results are written to a CSV file named `results.csv`.
+4. The results are written to a CSV file named `malicious_hashes.csv`.
 
 Here the project structure and the files used:
 
@@ -69,7 +69,7 @@ python main.py
 DEBUG = True
 ```
 
-4. *Output*: The program will generate a `results.csv` file with the following format:
+4. *Output*: The program will generate a `malicious_hashes.csv` file with the following format:
 
 ```plaintext
 Hash, AV Hit Rate %, Last Seen
